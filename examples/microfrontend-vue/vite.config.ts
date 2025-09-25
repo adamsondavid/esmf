@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import injectCss from "vite-plugin-css-injected-by-js";
 
 export default defineConfig({
   server: {
@@ -8,6 +9,7 @@ export default defineConfig({
   build: {
     assetsInlineLimit: Infinity,
     rollupOptions: {
+      // TODO: should we extract this into our own vite plugin??
       input: "src/esmf-main.ts",
       output: {
         entryFileNames: "main.js",
@@ -16,5 +18,5 @@ export default defineConfig({
       // external: ["vue"], TODO: uncomment once import map is here
     },
   },
-  plugins: [vue()],
+  plugins: [injectCss(), vue()],
 });
