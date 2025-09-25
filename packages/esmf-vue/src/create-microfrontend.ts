@@ -1,10 +1,10 @@
 import { MF } from "esmf-js";
-import { createApp } from "vue";
+import { Component, createApp } from "vue";
 
 type App = ReturnType<typeof createApp>;
 
 export type Options<P> = {
-  component: any;
+  component: Component;
   init?: (app: App, props: P) => void;
 };
 

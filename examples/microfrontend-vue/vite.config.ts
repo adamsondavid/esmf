@@ -10,7 +10,7 @@ export default defineConfig({
     assetsInlineLimit: Infinity,
     rollupOptions: {
       // TODO: should we extract this into our own vite plugin??
-      input: "src/esmf-main.ts",
+      input: "src/esmf.main.ts",
       output: {
         entryFileNames: "main.js",
       },
