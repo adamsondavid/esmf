@@ -1,0 +1,32 @@
+{
+  "name": "esmf-vue",
+  "version": "0.0.0+local-build",
+  "type": "module",
+  "description": "A library for building es-module native microfrontends",
+  "author": "David Adamson",
+  "license": "MIT",
+  "keywords": [
+    "microfrontends",
+    "microservices",
+    "esmf"
+  ],
+  "homepage": "https://github.com/adamsondavid/esmf#readme",
+  "bugs": {
+    "url": "https://github.com/adamsondavid/esmf/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamsondavid/esmf.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "esmf-js": "*",
+    "vue": "^3.5.22"
+  }
+}
