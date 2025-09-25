@@ -5,7 +5,7 @@ type App = ReturnType<typeof createApp>;
 
 export type Options<P> = {
   component: any;
-  init(app: App, props: P): void;
+  init?: (app: App, props: P) => void;
 };
 
 export function createMicrofrontend<P>(opts: Options<P>): MF<P> {
@@ -13,7 +13,7 @@ export function createMicrofrontend<P>(opts: Options<P>): MF<P> {
   return {
     mount(domElement: Element, props: P) {
       app = createApp(opts.component);
-      opts.init(app, props);
+      opts.init?.(app, props);
       app.mount(domElement);
     },
     unmount() {
