@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {},
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
