@@ -27,7 +27,9 @@
     "build": "vite build"
   },
   "dependencies": {
-    "esmf-js": "*",
-    "vue": "^3.5.22"
+    "esmf-js": "*"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
   }
 }
