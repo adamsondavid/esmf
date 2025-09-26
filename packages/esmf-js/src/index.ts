@@ -6,8 +6,6 @@ export type MF<P> = {
 };
 
 export async function loadMicroFrontend<P = unknown>(moduleName: string): Promise<MF<P>> {
-  // TODO: maybe return undefined if import fails??
-  // TODO: maybe write status of apps into a globally exported data structure??
   const microfrontend = await import(moduleName);
   return microfrontend.default;
 }
