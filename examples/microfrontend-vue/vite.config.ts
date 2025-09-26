@@ -6,17 +6,17 @@ export default defineConfig({
   server: {
     cors: true,
   },
+  // TODO: should we extract this into our own vite plugin??
   build: {
-    assetsInlineLimit: Infinity,
+    lib: {
+      entry: "src/esmf.main.ts",
+      fileName: "main",
+      formats: ["es"],
+    },
     rollupOptions: {
-      // TODO: should we extract this into our own vite plugin??
-      input: "src/esmf.main.ts",
-      output: {
-        entryFileNames: "main.js",
-      },
-      preserveEntrySignatures: "exports-only",
       external: ["vue"],
     },
+    assetsInlineLimit: Infinity,
   },
   plugins: [injectCss(), vue()],
 });
