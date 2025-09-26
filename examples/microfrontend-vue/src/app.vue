@@ -1,11 +1,11 @@
 <script lang="ts" setup></script>
 
 <template>
-  <h1>hello, i am a vue microfrontend</h1>
+  <h2>hello, i am a vue microfrontend</h2>
 </template>
 
 <style scoped>
-h1 {
+h2 {
   font-family: sans-serif;
 }
 </style>
