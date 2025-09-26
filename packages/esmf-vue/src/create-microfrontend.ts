@@ -12,8 +12,7 @@ type Options<P> = {
 export function createMicroFrontend<P>(options: Options<P>): MF<P> {
   return {
     async mount(domElement: Element, props: P) {
-      const component = typeof options.component === "function" ? options.component(props) : options.component;
-      const app = createApp(await component);
+      const app = createApp(await options.component(props));
       options.init?.(app, props);
       app.mount(domElement);
       return () => app.unmount();
