@@ -3,21 +3,20 @@ import { Component, createApp } from "vue";
 
 type App = ReturnType<typeof createApp>;
 
-export type Options<P> = {
-  component: Component;
+type Options<P> = {
+  component: Component | Promise<Component> | ((props: P) => Component) | ((props: P) => Promise<Component>);
   init?: (app: App, props: P) => void;
+  meta?: Record<string, unknown>;
 };
 
-export function createMicrofrontend<P>(opts: Options<P>): MF<P> {
-  let app: App;
+export function createMicroFrontend<P>(options: Options<P>): MF<P> {
   return {
     mount(domElement: Element, props: P) {
-      app = createApp(opts.component);
-      opts.init?.(app, props);
+      const app = createApp(options.component);
+      options.init?.(app, props);
       app.mount(domElement);
+      return () => app.unmount();
     },
-    unmount() {
-      app.unmount();
-    },
+    meta: options.meta,
   };
 }

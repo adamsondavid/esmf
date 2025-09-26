@@ -1,6 +1,6 @@
 import App from "./app.vue";
-import { createMicrofrontend } from "esmf-vue";
+import { createMicroFrontend } from "esmf-vue";
 
-export default createMicrofrontend({
+export default createMicroFrontend({
   component: App,
 });
