@@ -11,7 +11,7 @@ let unmount: UnmountFn | undefined;
 onMounted(async () => {
   const mf = await loadMicroFrontend(props.moduleName);
   // TODO: emit mounted event with mf.meta as payload
-  unmount = mf.mount(root.value, props.props);
+  unmount = await mf.mount(root.value, props.props);
 });
 
 onUnmounted(() => {

@@ -1,7 +1,7 @@
 export type UnmountFn = () => void;
 
 export type MF<P> = {
-  mount: (domElement: Element, props: P) => UnmountFn;
+  mount: (domElement: Element, props: P) => Promise<UnmountFn>;
   meta: Record<string, unknown> | undefined;
 };
 
