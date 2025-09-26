@@ -1,22 +1,22 @@
 import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
 import injectCss from "vite-plugin-css-injected-by-js";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  server: {
+  preview: {
     cors: true,
   },
   // TODO: should we extract this into our own vite plugin??
   build: {
     rollupOptions: {
-      input: "src/esmf.main.ts",
+      input: "src/esmf.main.tsx",
       output: {
         entryFileNames: "main.js",
       },
       preserveEntrySignatures: "exports-only",
-      external: ["vue"],
+      external: ["react", "react-dom", "react-dom/client"],
     },
     assetsInlineLimit: Infinity,
   },
-  plugins: [injectCss(), vue()],
+  plugins: [injectCss(), react()],
 });

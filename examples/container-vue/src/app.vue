@@ -4,11 +4,13 @@ import { MicroFrontend } from "esmf-vue";
 
 <template>
   <h1>Container</h1>
-  <MicroFrontend moduleName="microfrontend-vue" id="hello">
+  <MicroFrontend moduleName="microfrontend-vue" />
+  <MicroFrontend moduleName="microfrontend-react" />
+
+  <MicroFrontend moduleName="microfrontend-react" id="hello">
     <div>loading...</div>
     <template #error>
-      <div>failed to load microfrontend-vue</div>
+      <div>failed to load microfrontend-react</div>
     </template>
   </MicroFrontend>
-  <MicroFrontend moduleName="microfrontend-vue" />
 </template>

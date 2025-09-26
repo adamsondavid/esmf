@@ -1,6 +1,11 @@
 {
   "imports": {
     "vue": "https://esm.sh/vue@3",
-    "microfrontend-vue": "http://localhost:3001/src/esmf.main.ts"
+    "react": "https://esm.sh/react@19",
+    "react-dom": "https://esm.sh/react-dom@19",
+    "react-dom/client": "https://esm.sh/react-dom@19/client",
+
+    "microfrontend-vue": "http://localhost:3001/src/esmf.main.ts",
+    "microfrontend-react": "http://localhost:3002/main.js"
   }
 }
