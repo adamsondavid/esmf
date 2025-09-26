@@ -14,7 +14,7 @@ export default defineConfig({
         entryFileNames: "main.js",
       },
       preserveEntrySignatures: "exports-only",
-      external: ["react", "react-dom", "react-dom/client"],
+      external: ["react", "react-dom", "react-dom/client", "react/jsx-runtime"],
     },
     assetsInlineLimit: Infinity,
   },

@@ -10,7 +10,7 @@ export default defineConfig({
       formats: ["es"],
     },
     rollupOptions: {
-      external: ["esmf-js", "react", "react-dom", "react-dom/client"],
+      external: ["esmf-js", "react", "react-dom", "react-dom/client", "react/jsx-runtime"],
     },
   },
   plugins: [
