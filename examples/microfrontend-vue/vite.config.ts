@@ -15,7 +15,7 @@ export default defineConfig({
         entryFileNames: "main.js",
       },
       preserveEntrySignatures: "exports-only",
-      // external: ["vue"], TODO: uncomment once import map is here
+      external: ["vue"],
     },
   },
   plugins: [injectCss(), vue()],

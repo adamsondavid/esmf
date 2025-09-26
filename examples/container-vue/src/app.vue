@@ -4,6 +4,6 @@ import { MicroFrontend } from "esmf-vue";
 
 <template>
   <h1>Container</h1>
-  <MicroFrontend moduleName="http://localhost:3001/src/esmf.main.ts" />
-  <MicroFrontend moduleName="http://localhost:3001/src/esmf.main.ts" />
+  <MicroFrontend moduleName="microfrontend-vue" />
+  <MicroFrontend moduleName="microfrontend-vue" />
 </template>

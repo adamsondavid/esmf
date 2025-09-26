@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "vue": "https://esm.sh/vue@3",
+    "microfrontend-vue": "http://localhost:3001/src/esmf.main.ts"
+  }
+}
