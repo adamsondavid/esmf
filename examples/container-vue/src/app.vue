@@ -8,9 +8,7 @@ import { MicroFrontend } from "esmf-vue";
   <MicroFrontend moduleName="microfrontend-react" />
 
   <MicroFrontend moduleName="microfrontend-react" id="hello">
-    <div>loading...</div>
-    <template #error>
-      <div>failed to load microfrontend-react</div>
-    </template>
+    loading...
+    <template #error>failed to load microfrontend-react</template>
   </MicroFrontend>
 </template>

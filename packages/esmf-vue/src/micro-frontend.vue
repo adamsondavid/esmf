@@ -1,6 +1,6 @@
 <script lang="ts" setup generic="P">
 import { loadMicroFrontend, UnmountFn } from "esmf-js";
-import { computed, getCurrentInstance, onUnmounted, ref, watch } from "vue";
+import { computed, getCurrentInstance, nextTick, onUnmounted, ref, watch } from "vue";
 
 const props = defineProps<{ moduleName: string; props?: P }>();
 const emit = defineEmits<{
@@ -22,8 +22,11 @@ async function mountMicroFrontend() {
   try {
     const mf = await loadMicroFrontend(props.moduleName);
     emit("loaded", mf.meta);
-    unmount = await mf.mount(root.value, props.props);
+
     status.value = "ok";
+    await nextTick();
+
+    unmount = await mf.mount(root.value, props.props);
     emit("mounted");
   } catch (e) {
     status.value = "error";
@@ -41,8 +44,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div ref="root">
-    <slot v-if="status === 'loading'" name="default" />
-    <slot v-if="status === 'error'" name="error" />
+  <div v-if="status === 'ok'" ref="root" v-bind="$attrs" />
+  <div v-if="status === 'loading'" v-bind="$attrs">
+    <slot name="default" />
+  </div>
+  <div v-if="status === 'error'" v-bind="$attrs">
+    <slot name="error" />
   </div>
 </template>
