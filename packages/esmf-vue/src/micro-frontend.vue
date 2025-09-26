@@ -1,6 +1,6 @@
 <script lang="ts" setup generic="P">
 import { loadMicroFrontend, UnmountFn } from "esmf-js";
-import { computed, getCurrentInstance, onMounted, onUnmounted, ref } from "vue";
+import { computed, getCurrentInstance, onUnmounted, ref, watch } from "vue";
 
 const props = defineProps<{ moduleName: string; props?: P }>();
 const emit = defineEmits<{
@@ -15,7 +15,10 @@ let unmount: UnmountFn | undefined;
 const root = ref();
 const status = ref<"loading" | "error" | "ok">("loading");
 
-onMounted(async () => {
+async function mountMicroFrontend() {
+  unmount?.(); // clean up previous instance
+  status.value = "loading";
+
   try {
     const mf = await loadMicroFrontend(props.moduleName);
     emit("loaded", mf.meta);
@@ -28,7 +31,9 @@ onMounted(async () => {
       console.error(`[esmf] Failed to bootstrap micro-frontend: ${props.moduleName}\n`, e);
     emit("error", e);
   }
-});
+}
+
+watch(() => [props.moduleName, props.props], mountMicroFrontend, { immediate: true });
 
 onUnmounted(() => {
   unmount?.();
