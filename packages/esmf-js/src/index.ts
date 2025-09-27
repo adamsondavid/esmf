@@ -6,6 +6,6 @@ export type MF<P> = {
 };
 
 export async function loadMicroFrontend<P = unknown>(moduleName: string): Promise<MF<P>> {
-  const microfrontend = await import(moduleName);
-  return microfrontend.default;
+  const microFrontend = await import(moduleName);
+  return microFrontend.default;
 }
