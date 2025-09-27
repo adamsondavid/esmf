@@ -3,6 +3,7 @@
   "type": "module",
   "scripts": {},
   "devDependencies": {
+    "@changesets/cli": "^2.29.7",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2"
   }
