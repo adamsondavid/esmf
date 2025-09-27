@@ -1,5 +1,12 @@
 # esmf-vue
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [eb02a49]
+  - esmf-js@0.0.2
+
 ## 0.0.2
 
 ### Patch Changes
