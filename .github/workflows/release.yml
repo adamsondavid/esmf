@@ -10,7 +10,7 @@ env:
 
 jobs:
   version:
-    timeout-minutes: 15
+    if: github.repository == 'adamsondavid/esmf'
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -25,7 +25,7 @@ jobs:
           node-version: lts/*
           cache: "pnpm"
       - run: pnpm install
-      - run: pnpm run -r build
+      - run: pnpm run -r build # TODO run ci here? or depend on another action?
       - name: Create Release Pull Request or Publish to npm
         uses: changesets/action@v1
         with:
@@ -34,4 +34,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
-          NPM_CONFIG_ACCESS: public
