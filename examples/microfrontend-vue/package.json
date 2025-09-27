@@ -1,20 +1,19 @@
 {
   "name": "microfrontend-vue",
-  "version": "0.0.0+local-build",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --port 3001",
     "build": "vite build"
   },
   "dependencies": {
-    "esmf-vue": "*",
-    "vue": "^3.5.22"
+    "esmf-vue": "workspace:*",
+    "vue": "catalog:"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.1",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.7",
-    "vite-plugin-css-injected-by-js": "^3.5.2",
-    "vue-tsc": "^3.0.8"
+    "@vitejs/plugin-vue": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-css-injected-by-js": "catalog:",
+    "vue-tsc": "catalog:"
   }
 }

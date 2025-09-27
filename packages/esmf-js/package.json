@@ -1,6 +1,6 @@
 {
   "name": "esmf-js",
-  "version": "0.0.0+local-build",
+  "version": "0.0.0",
   "type": "module",
   "description": "A library for building es-module native microfrontends",
   "author": "David Adamson",
@@ -25,5 +25,8 @@
   "scripts": {
     "dev": "tsup src/index.ts --format=esm --dts --minify --watch",
     "build": "tsup src/index.ts --format=esm --dts --minify && node ../../scripts/add-license.js"
+  },
+  "devDependencies": {
+    "tsup": "catalog:"
   }
 }

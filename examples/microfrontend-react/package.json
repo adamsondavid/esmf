@@ -1,24 +1,22 @@
 {
   "name": "microfrontend-react",
-  "version": "0.0.0+local-build",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev:standalone": "vite",
-    "dev:esmf": "concurrently \"npm run build -- --watch\" \"vite preview --port 3002\"",
+    "dev:esmf": "pnpm exec \"npm run build -- --watch\" \"vite preview --port 3002\" --parallel",
     "build": "vite build"
   },
   "dependencies": {
-    "esmf-react": "*",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "esmf-react": "workspace:*",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@types/react": "^19.1.13",
-    "@types/react-dom": "^19.1.9",
-    "@vitejs/plugin-react": "^5.0.3",
-    "concurrently": "^9.2.1",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.7",
-    "vite-plugin-css-injected-by-js": "^3.5.2"
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-css-injected-by-js": "catalog:"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "esmf-react",
-  "version": "0.0.0+local-build",
+  "version": "0.0.0",
   "type": "module",
   "description": "A library for building es-module native microfrontends",
   "author": "David Adamson",
@@ -27,7 +27,14 @@
     "build": "vite build && node ../../scripts/add-license.js"
   },
   "dependencies": {
-    "esmf-js": "*"
+    "esmf-js": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
