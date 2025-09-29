@@ -9,7 +9,10 @@ env:
   CI: true
 
 jobs:
+  ci:
+    uses: .ci.yml
   version:
+    needs: ci
     if: github.repository == 'adamsondavid/esmf'
     runs-on: ubuntu-latest
     permissions:
@@ -19,13 +22,19 @@ jobs:
       issues: write
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: "pnpm"
       - run: pnpm install
-      - run: pnpm run -r build # TODO run ci here? or depend on another action?
+      - run: pnpm run build
       - name: Create Release Pull Request or Publish to npm
         uses: changesets/action@v1
         with:
