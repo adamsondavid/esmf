@@ -1,4 +1,5 @@
 {
+  "name": "esmf",
   "private": true,
   "type": "module",
   "scripts": {
