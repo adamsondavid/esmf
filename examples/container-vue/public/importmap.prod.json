@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "vue": "https://esm.sh/vue@3",
+    "react": "https://esm.sh/react@19",
+    "react/jsx-runtime": "https://esm.sh/react@19/jsx-runtime",
+    "react-dom": "https://esm.sh/react-dom@19",
+    "react-dom/client": "https://esm.sh/react-dom@19/client",
+
+    "microfrontend-vue": "https://esmf-microfrontend-vue.vercel.app/main.js",
+    "microfrontend-react": "https://esmf-microfrontend-react.vercel.app/main.js"
+  }
+}
