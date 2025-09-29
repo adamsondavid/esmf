@@ -6,6 +6,7 @@
   "scripts": {
     "dev:standalone": "vite",
     "dev:esmf": "pnpm exec \"npm run build -- --watch\" \"vite preview --port 3002\" --parallel",
+    "check-types": "tsc --noEmit",
     "build": "vite build"
   },
   "dependencies": {
@@ -17,6 +18,8 @@
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "catalog:",
+    "typescript": "catalog:",
+    "typescript-config": "workspace:*",
     "vite": "catalog:",
     "vite-plugin-css-injected-by-js": "catalog:"
   }

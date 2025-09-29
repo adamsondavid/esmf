@@ -1,12 +1,17 @@
 {
   "private": true,
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "dev": "turbo run dev",
+    "check-format": "prettier --ignore-path .gitignore --ignore-path .prettierignore --check .",
+    "check-types": "turbo run check-types",
+    "build": "turbo run build"
+  },
   "packageManager": "pnpm@10.17.1",
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.1",
     "@changesets/cli": "^2.29.7",
     "prettier": "^3.6.2",
-    "typescript": "^5.9.2"
+    "turbo": "^2.5.8"
   }
 }
