@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/importmapt.json",
+      "source": "/importmap.json",
       "destination": "/importmap.prod.json"
     }
   ],
