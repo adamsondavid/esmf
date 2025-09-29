@@ -27,6 +27,9 @@ catalogs:
     tsup:
       specifier: ^8.5.0
       version: 8.5.0
+    typescript:
+      specifier: ^5.9.2
+      version: 5.9.2
     vite:
       specifier: ^7.1.7
       version: 7.1.7
@@ -59,9 +62,9 @@ importers:
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
-      typescript:
-        specifier: ^5.9.2
-        version: 5.9.2
+      turbo:
+        specifier: ^2.5.8
+        version: 2.5.8
 
   examples/container-react:
     dependencies:
@@ -84,6 +87,12 @@ importers:
       '@vitejs/plugin-react':
         specifier: 'catalog:'
         version: 5.0.4(vite@7.1.7)
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.2
+      typescript-config:
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       vite:
         specifier: 'catalog:'
         version: 7.1.7
@@ -103,6 +112,12 @@ importers:
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
         version: 6.0.1(vite@7.1.7)(vue@3.5.22(typescript@5.9.2))
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.2
+      typescript-config:
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       vite:
         specifier: 'catalog:'
         version: 7.1.7
@@ -134,6 +149,12 @@ importers:
       '@vitejs/plugin-react':
         specifier: 'catalog:'
         version: 5.0.4(vite@7.1.7)
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.2
+      typescript-config:
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       vite:
         specifier: 'catalog:'
         version: 7.1.7
@@ -153,6 +174,12 @@ importers:
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
         version: 6.0.1(vite@7.1.7)(vue@3.5.22(typescript@5.9.2))
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.2
+      typescript-config:
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       vite:
         specifier: 'catalog:'
         version: 7.1.7
@@ -168,6 +195,12 @@ importers:
       tsup:
         specifier: 'catalog:'
         version: 8.5.0(@microsoft/api-extractor@7.52.13(@types/node@12.20.55))(postcss@8.5.6)(typescript@5.9.2)
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.2
+      typescript-config:
+        specifier: workspace:*
+        version: link:../typescript-config
 
   packages/esmf-react:
     dependencies:
@@ -190,6 +223,12 @@ importers:
       '@vitejs/plugin-react':
         specifier: 'catalog:'
         version: 5.0.4(vite@7.1.7)
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.2
+      typescript-config:
+        specifier: workspace:*
+        version: link:../typescript-config
       vite:
         specifier: 'catalog:'
         version: 7.1.7
@@ -209,12 +248,23 @@ importers:
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
         version: 6.0.1(vite@7.1.7)(vue@3.5.22(typescript@5.9.2))
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.2
+      typescript-config:
+        specifier: workspace:*
+        version: link:../typescript-config
       vite:
         specifier: 'catalog:'
         version: 7.1.7
       vite-plugin-dts:
         specifier: 'catalog:'
         version: 4.5.4(rollup@4.52.3)(typescript@5.9.2)(vite@7.1.7)
+      vue-tsc:
+        specifier: 'catalog:'
+        version: 3.0.8(typescript@5.9.2)
+
+  packages/typescript-config: {}
 
 packages:
 
@@ -1637,6 +1687,40 @@ packages:
         optional: true
       typescript:
         optional: true
+
+  turbo-darwin-64@2.5.8:
+    resolution: {integrity: sha512-Dh5bCACiHO8rUXZLpKw+m3FiHtAp2CkanSyJre+SInEvEr5kIxjGvCK/8MFX8SFRjQuhjtvpIvYYZJB4AGCxNQ==}
+    cpu: [x64]
+    os: [darwin]
+
+  turbo-darwin-arm64@2.5.8:
+    resolution: {integrity: sha512-f1H/tQC9px7+hmXn6Kx/w8Jd/FneIUnvLlcI/7RGHunxfOkKJKvsoiNzySkoHQ8uq1pJnhJ0xNGTlYM48ZaJOQ==}
+    cpu: [arm64]
+    os: [darwin]
+
+  turbo-linux-64@2.5.8:
+    resolution: {integrity: sha512-hMyvc7w7yadBlZBGl/bnR6O+dJTx3XkTeyTTH4zEjERO6ChEs0SrN8jTFj1lueNXKIHh1SnALmy6VctKMGnWfw==}
+    cpu: [x64]
+    os: [linux]
+
+  turbo-linux-arm64@2.5.8:
+    resolution: {integrity: sha512-LQELGa7bAqV2f+3rTMRPnj5G/OHAe2U+0N9BwsZvfMvHSUbsQ3bBMWdSQaYNicok7wOZcHjz2TkESn1hYK6xIQ==}
+    cpu: [arm64]
+    os: [linux]
+
+  turbo-windows-64@2.5.8:
+    resolution: {integrity: sha512-3YdcaW34TrN1AWwqgYL9gUqmZsMT4T7g8Y5Azz+uwwEJW+4sgcJkIi9pYFyU4ZBSjBvkfuPZkGgfStir5BBDJQ==}
+    cpu: [x64]
+    os: [win32]
+
+  turbo-windows-arm64@2.5.8:
+    resolution: {integrity: sha512-eFC5XzLmgXJfnAK3UMTmVECCwuBcORrWdewoiXBnUm934DY6QN8YowC/srhNnROMpaKaqNeRpoB5FxCww3eteQ==}
+    cpu: [arm64]
+    os: [win32]
+
+  turbo@2.5.8:
+    resolution: {integrity: sha512-5c9Fdsr9qfpT3hA0EyYSFRZj1dVVsb6KIWubA9JBYZ/9ZEAijgUEae0BBR/Xl/wekt4w65/lYLTFaP3JmwSO8w==}
+    hasBin: true
 
   typescript@5.8.2:
     resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
@@ -3209,6 +3293,33 @@ snapshots:
       - supports-color
       - tsx
       - yaml
+
+  turbo-darwin-64@2.5.8:
+    optional: true
+
+  turbo-darwin-arm64@2.5.8:
+    optional: true
+
+  turbo-linux-64@2.5.8:
+    optional: true
+
+  turbo-linux-arm64@2.5.8:
+    optional: true
+
+  turbo-windows-64@2.5.8:
+    optional: true
+
+  turbo-windows-arm64@2.5.8:
+    optional: true
+
+  turbo@2.5.8:
+    optionalDependencies:
+      turbo-darwin-64: 2.5.8
+      turbo-darwin-arm64: 2.5.8
+      turbo-linux-64: 2.5.8
+      turbo-linux-arm64: 2.5.8
+      turbo-windows-64: 2.5.8
+      turbo-windows-arm64: 2.5.8
 
   typescript@5.8.2: {}
 

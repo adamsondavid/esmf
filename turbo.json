@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/turbo/schema.json",
+  "ui": "tui",
+  "globalDependencies": ["scripts/**"],
+  "tasks": {
+    "dev": {
+      "persistent": true,
+      "cache": false
+    },
+    "check-types": {
+      "dependsOn": ["^build"]
+    },
+    "build": {
+      "outputs": ["dist/**"],
+      "dependsOn": ["^build"]
+    }
+  }
+}

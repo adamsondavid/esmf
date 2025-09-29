@@ -13,11 +13,5 @@ export default defineConfig({
       external: ["esmf-js", "vue"],
     },
   },
-  plugins: [
-    dts({
-      include: ["src"],
-      rollupTypes: true,
-    }),
-    vue(),
-  ],
+  plugins: [dts({ rollupTypes: true }), vue()],
 });

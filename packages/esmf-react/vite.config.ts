@@ -13,11 +13,5 @@ export default defineConfig({
       external: ["esmf-js", "react", "react-dom", "react-dom/client", "react/jsx-runtime"],
     },
   },
-  plugins: [
-    dts({
-      include: ["src"],
-      rollupTypes: true,
-    }),
-    react(),
-  ],
+  plugins: [dts({ rollupTypes: true }), react()],
 });

@@ -24,17 +24,21 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "vite build --watch",
+    "check-types": "vue-tsc --noEmit",
     "build": "vite build && node ../../scripts/add-license.js"
   },
   "dependencies": {
     "esmf-js": "workspace:^"
   },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "catalog:",
-    "vite": "catalog:",
-    "vite-plugin-dts": "catalog:"
-  },
   "peerDependencies": {
     "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "catalog:",
+    "typescript": "catalog:",
+    "typescript-config": "workspace:*",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vue-tsc": "catalog:"
   }
 }

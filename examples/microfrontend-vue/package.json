@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 3001",
+    "check-types": "vue-tsc --noEmit",
     "build": "vite build"
   },
   "dependencies": {
@@ -13,6 +14,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "catalog:",
+    "typescript": "catalog:",
+    "typescript-config": "workspace:*",
     "vite": "catalog:",
     "vite-plugin-css-injected-by-js": "catalog:",
     "vue-tsc": "catalog:"

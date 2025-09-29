@@ -24,20 +24,23 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "vite build --watch",
+    "check-types": "tsc --noEmit",
     "build": "vite build && node ../../scripts/add-license.js"
   },
   "dependencies": {
     "esmf-js": "workspace:^"
   },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
   "devDependencies": {
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "catalog:",
+    "typescript": "catalog:",
+    "typescript-config": "workspace:*",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:"
-  },
-  "peerDependencies": {
-    "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
   }
 }
