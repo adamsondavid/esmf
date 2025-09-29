@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/importmap.json",
+      "destination": "/importmap.prod.json",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31556952, immutable" }]
+    }
+  ]
+}
