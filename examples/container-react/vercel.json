@@ -1,8 +1,9 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/importmap.json",
-      "destination": "/importmap.prod.json"
+      "destination": "/importmap.prod.json",
+      "permanent": true
     }
   ],
   "headers": [
