@@ -15,7 +15,6 @@ export function createMicroFrontend<P>(options: Options<P>): MF<P> {
       const app = createApp(await options.component(props));
       await options.init?.(app, props);
       app.mount(domElement);
-      // TODO: should we also delete nodes from dom when unmounting?
       return () => app.unmount();
     },
     meta: options.meta,
