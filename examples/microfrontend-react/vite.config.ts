@@ -8,7 +8,7 @@ export default defineConfig({
   },
   // TODO: should we extract this into our own vite plugin??
   build: {
-    rollupOptions: {
+    rolldownOptions: {
       input: "src/esmf.main.tsx",
       output: {
         entryFileNames: "main.js",

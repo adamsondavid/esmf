@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 4001",
+    "dev": "vite --port 3010",
     "check-types": "vue-tsc --noEmit",
     "build": "vite build"
   },

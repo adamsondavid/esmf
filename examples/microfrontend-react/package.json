@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev:standalone": "vite",
-    "dev:esmf": "pnpm exec \"npm run build -- --watch\" \"vite preview --port 3002\" --parallel",
+    "dev": "concurrently -n BUILD,PREVIEW,DEV -c cyan,magenta,green \"pnpm run build --watch\" \"wait-on dist && vite preview --port 3020\" \"vite --port 3021\"",
     "check-types": "tsc --noEmit",
     "build": "vite build"
   },
@@ -18,9 +17,11 @@
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "catalog:",
+    "concurrently": "catalog:",
     "typescript": "catalog:",
     "typescript-config": "workspace:*",
     "vite": "catalog:",
-    "vite-plugin-css-injected-by-js": "catalog:"
+    "vite-plugin-css-injected-by-js": "catalog:",
+    "wait-on": "catalog:"
   }
 }

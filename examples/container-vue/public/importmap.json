@@ -6,7 +6,7 @@
     "react-dom": "https://esm.sh/react-dom@19",
     "react-dom/client": "https://esm.sh/react-dom@19/client",
 
-    "microfrontend-vue": "http://localhost:3001/src/esmf.main.ts",
-    "microfrontend-react": "http://localhost:3002/main.js"
+    "microfrontend-react": "http://localhost:3020/main.js",
+    "microfrontend-vue": "http://localhost:3030/src/esmf.main.ts"
   }
 }

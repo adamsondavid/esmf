@@ -4,7 +4,7 @@ import dynamicImportmap from "vite-plugin-dynamic-importmap";
 
 export default defineConfig({
   build: {
-    rollupOptions: {
+    rolldownOptions: {
       external: ["vue"],
     },
   },
