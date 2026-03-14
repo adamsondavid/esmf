@@ -23,12 +23,12 @@
   ],
   "main": "dist/index.js",
   "scripts": {
-    "dev": "tsup src/index.ts --format=esm --dts --minify --watch",
+    "dev": "pnpm run build --watch",
     "check-types": "tsc --noEmit",
-    "build": "tsup src/index.ts --format=esm --dts --minify && node ../../scripts/add-license.js"
+    "build": "tsdown src/index.ts --dts --minify --platform browser"
   },
   "devDependencies": {
-    "tsup": "catalog:",
+    "tsdown": "catalog:",
     "typescript": "catalog:",
     "typescript-config": "workspace:*"
   }

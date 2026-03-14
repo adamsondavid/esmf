@@ -9,9 +9,9 @@ export default defineConfig({
       fileName: "index",
       formats: ["es"],
     },
-    rollupOptions: {
+    rolldownOptions: {
       external: ["esmf-js", "react", "react-dom", "react-dom/client", "react/jsx-runtime"],
     },
   },
-  plugins: [dts({ rollupTypes: true }), react()],
+  plugins: [dts({ exclude: ["dist"], rollupTypes: true }), react()],
 });

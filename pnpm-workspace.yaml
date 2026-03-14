@@ -3,17 +3,19 @@ packages:
   - packages/*
 
 catalog:
-  "@types/react": ^19.2.9
+  "@types/react": ^19.2.14
   "@types/react-dom": ^19.2.3
-  "@vitejs/plugin-react": ^5.1.2
-  "@vitejs/plugin-vue": ^6.0.3
-  react: ^19.2.3
-  react-dom: ^19.2.3
-  tsup: ^8.5.1
+  "@vitejs/plugin-react": ^6.0.1
+  "@vitejs/plugin-vue": ^6.0.5
+  "wait-on": "^9.0.4"
+  concurrently: ^9.2.1
+  react-dom: ^19.2.4
+  react: ^19.2.4
+  tsdown: ^0.21.2
   typescript: ^5.9.3
-  vite: ^7.3.1
-  vite-plugin-css-injected-by-js: ^3.5.2
+  vite-plugin-css-injected-by-js: ^4.0.1
   vite-plugin-dts: ^4.5.4
-  vite-plugin-dynamic-importmap: ^2.0.4
-  vue: ^3.5.27
-  vue-tsc: ^3.2.3
+  vite-plugin-dynamic-importmap: ^2.1.1
+  vite: ^8.0.0
+  vue-tsc: ^3.2.5
+  vue: ^3.5.30

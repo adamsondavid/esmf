@@ -9,9 +9,9 @@ export default defineConfig({
       fileName: "index",
       formats: ["es"],
     },
-    rollupOptions: {
+    rolldownOptions: {
       external: ["esmf-js", "vue"],
     },
   },
-  plugins: [dts({ rollupTypes: true }), vue()],
+  plugins: [dts({ exclude: ["dist"], rollupTypes: true }), vue()],
 });
