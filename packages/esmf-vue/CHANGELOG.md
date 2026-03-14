@@ -1,5 +1,13 @@
 # esmf-vue
 
+## 0.1.3
+
+### Patch Changes
+
+- 714c001: feat: update deps and refactor
+- Updated dependencies [714c001]
+  - esmf-js@0.1.2
+
 ## 0.1.2
 
 ### Patch Changes
